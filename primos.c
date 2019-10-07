@@ -15,18 +15,17 @@ int main(){
     for(i = 0; i< q ; i++){
 
         for(j = 1; j < vetor[i]; j++ ){
-        if(vetor[i] % j == 0){
-            cont ++;
+            if(vetor[i] % j == 0){
+                cont ++;
+            }
         }
-    }
         if(cont > 2){
             printf("composto\n");
-        }else 
+        } else 
         if(cont <=2){
             printf("primo\n");
         }
         cont=0;
-}
+    }
     return 0;
-
 }
