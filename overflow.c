@@ -9,8 +9,8 @@ int main(){
     int N = 0;
     int res = 0;
 
-      scanf("%d", &N);
-      scanf("%d %c %d", &n1, &C, &n2);
+    scanf("%d", &N);
+    scanf("%d %c %d", &n1, &C, &n2);
     
     if (C == '+'){
        res = n1 + n2;
@@ -29,8 +29,6 @@ int main(){
        }
 
     }
-
-
 
     return 0;
 }

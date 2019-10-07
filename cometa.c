@@ -16,39 +16,29 @@ int next=0;
 
     if(anoDado > ref){
 
-      diferenca =  anoDado - ref;
-      aparicoes = diferenca / 76;
+        diferenca =  anoDado - ref;
+        aparicoes = diferenca / 76;
 
-         ultimoAno = ref + (aparicoes * 76);
-         anosPassados = anoDado - ultimoAno;
-         restantes = 76 - anosPassados;
+        ultimoAno = ref + (aparicoes * 76);
+        anosPassados = anoDado - ultimoAno;
+        restantes = 76 - anosPassados;
 
         if (diferenca/4 > 365){
-    
-        printf( "%d", restantes+ anoDado - (diferenca/4)/365  );
+            printf( "%d", restantes+ anoDado - (diferenca/4)/365  );
         } 
-    
-         printf( "%d", restantes+ anoDado);
+            printf( "%d", restantes+ anoDado);
         }
-
         
         else if(anoDado < ref){
-        diferenca = ref - anoDado;
-        aparicoes = diferenca / 76;
+            diferenca = ref - anoDado;
+            aparicoes = diferenca / 76;
         
-        if (diferenca/4 > 365){
-    
-        printf( "%d", ref - aparicoes * 76 - (diferenca/4)/365 );
-        } 
-        
+        if (diferenca/4 > 365) {
+            printf( "%d", ref - aparicoes * 76 - (diferenca/4)/365 );
+        }         
         else{    
-         printf( "%d", ref - aparicoes * 76);
+            printf( "%d", ref - aparicoes * 76);
         }
     }
-
-
-
-
-return 0;
-
+    return 0;
 }
