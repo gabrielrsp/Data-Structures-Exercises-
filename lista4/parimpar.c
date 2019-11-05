@@ -48,7 +48,9 @@ int *alocaVetor(int num_componentes)
 
 int main(){
 
-	int qtd, i,contP, contI;
+	int qtd, i;
+	int contP=0;
+	int contI=0;
     	scanf("%d", &qtd);
 
 	int *vetor;
