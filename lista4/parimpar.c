@@ -42,7 +42,7 @@ int *alocaVetor(int num_componentes)
   v = (int *) malloc(num_componentes * sizeof(int));
 
   return (v);
-	//free(v);
+
 }
 
 
@@ -85,7 +85,11 @@ int main(){
         	for(i=0; i<contP ;i++){
             	printf("%d ", vetPar[i]);
         	}
-        	printf("\n");
+        	
+			if(contP !=0){
+				printf("\n");
+			}
+
         	for(i=0; i<contI ;i++){
             	printf("%d ", vetImpar[i]);
         	}
