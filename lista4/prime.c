@@ -57,14 +57,14 @@ int main(){
 
         for(i=1;i<maior+1;){
             res = retornaPrimo(cont);
-                if(res != 0 && res){
+                if(res != 0){
                     vetPrimo[i] = cont;
                     cont++;
                     i++;
                 }else
                     cont++;
         }
-        
+
         for(i=0;i<tam;i++){
             val = vetor[i];
             printf("%d ", vetPrimo[val]);
