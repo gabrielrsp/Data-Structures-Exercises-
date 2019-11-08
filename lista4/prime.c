@@ -21,54 +21,53 @@ int retornaPrimo(int num) {
 void insertion(int *v, int tam){
 
     int i, j, aux;
-    for(i =1; i< tam; i++){
-        aux = v[i];
-        j = i - 1;
+    
+        for(i =1; i< tam; i++){
+            aux = v[i];
+            j = i - 1;
 
-        while ((j >= 0) && (aux < v[j])){
-            v[j+1] = v[j];
-            j--;
+            while ((j >= 0) && (aux < v[j])){
+                v[j+1] = v[j];
+                j--;
+            }
+            v[j+1] = aux;
         }
-        v[j+1] = aux;
-    }
 }
-
 
 int main(){
 
-    int tam, i, j, res;
+    int tam, i, j, res, maior, val;
     
-
         scanf("%d", &tam);
 
-    int vetor[tam];
-    int vetPrimo[tam];
+    int vetor[1000];
+    int vetPrimo[1000];
 
         for(i=0; i<tam;i++){
             scanf("%d", &vetor[i]);
         }
     
-    insertion(vetor, tam);
+        insertion(vetor, tam);
 
-    for(i=0;i<tam;i++){
-        printf("%d ", vetor[i]);
-    }
-    int cont = vetor[0];
+        for(i=0;i<tam;i++){
+            maior = vetor[i];
+        }
 
-    printf("\n\n");
+    int cont = 2;
 
-     for(i=0;i<tam;){
-        res = retornaPrimo(cont);
-            if(res != 0 && res != 1){
-                vetPrimo[i] = cont;
-                cont++;
-                i++;
-            }else
-            cont++;
-    }
-
-       for(i=0;i<tam;i++){
-        printf("%d ", vetPrimo[i]);
-    }
+        for(i=1;i<maior+1;){
+            res = retornaPrimo(cont);
+                if(res != 0 && res){
+                    vetPrimo[i] = cont;
+                    cont++;
+                    i++;
+                }else
+                    cont++;
+        }
+        
+        for(i=0;i<tam;i++){
+            val = vetor[i];
+            printf("%d ", vetPrimo[val]);
+            val=0;
+        }
 }
- 
